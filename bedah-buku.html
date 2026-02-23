@@ -1,0 +1,431 @@
+<html lang="id">
+<head>  <meta charset="UTF-8"   />
+        <meta name="viewport" content="widht=device-widht,initial-scale=1.0"  />
+        <title>Produk Buku</title>
+        </head>
+
+<body>
+    <style>
+        /* ===== WARNA DASAR ===== */
+:root{
+    --vintage-yellow: #f4d06f;
+    --vintage-dark: #5a3e1b;
+    --vintage-brown: #c79b3b;
+    --vintage-light: #fff6d6;
+    --vintage-shadow: rgba(0,0,0,0.15);
+}
+
+/* ===== BODY ===== */
+body{
+    margin:0;
+    font-family: Georgia, serif;
+    background: var(--vintage-light);
+    color: var(--vintage-dark);
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+    background: var(--vintage-yellow);
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:3px solid var(--vintage-brown);
+}
+
+.navbar a{
+    text-decoration:none;
+    color: var(--vintage-dark);
+    font-weight:bold;
+    margin-left:20px;
+}
+
+.navbar a:hover{
+    color:white;
+}
+
+/* ===== BUTTON ===== */
+button{
+    background: var(--vintage-yellow);
+    border:none;
+    padding:10px 20px;
+    border-radius:6px;
+    color: var(--vintage-dark);
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow: 2px 2px 6px var(--vintage-shadow);
+}
+
+button:hover{
+    background: var(--vintage-brown);
+    color:white;
+}
+
+/* ===== CARD PRODUK ===== */
+.card{
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 4px 10px var(--vintage-shadow);
+    border:1px solid #ecd9a3;
+}
+
+.card h3{
+    margin-top:0;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background: var(--vintage-yellow);
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+    border-top:3px solid var(--vintage-brown);
+}
+
+/* ===== HEADER ===== */
+header{
+    background:#f4d06f;
+    padding:20px 40px;
+    border-bottom:3px solid #c79b3b;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* container isi header */
+.header-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* logo / judul */
+.header-title{
+    font-family:Georgia, serif;
+    font-size:28px;
+    color:#5a3e1b;
+    margin:0;
+}
+
+/* menu navigasi */
+.header-menu a{
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:bold;
+    color:#5a3e1b;
+    transition:0.3s;
+}
+
+/* hover menu */
+.header-menu a:hover{
+    color:white;
+    background:#c79b3b;
+    padding:5px 12px;
+    border-radius:6px;
+}
+
+/* ===== CONTAINER ARTIKEL ===== */
+.artikel{
+    max-width:800px;
+    margin:40px auto;
+    padding:30px;
+    background:#fffdf4;
+    border:1px solid #ecd9a3;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    font-family:Georgia, serif;
+    color:#5a3e1b;
+    line-height:1.7;
+}
+
+/* ===== PENULIS ===== */
+.artikel-penulis{
+    font-size:14px;
+    margin-bottom:15px;
+    color:#8b6b2e;
+    font-style:italic;
+    text-align:center;
+}
+
+/* ===== GAMBAR SAMPUL ===== */
+.artikel-sampul{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:12px;
+    margin:15px 0 25px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ===== PARAGRAF ===== */
+.artikel p{
+    margin-bottom:18px;
+}
+
+/* ===== BLOCKQUOTE ===== */
+.artikel blockquote{
+    background:#fff6d6;
+    border-left:5px solid #c79b3b;
+    padding:15px 20px;
+    margin:25px 0;
+    font-style:italic;
+    border-radius:8px;
+    position:relative;
+}
+
+/* tanda kutip dekoratif */
+.artikel blockquote::before{
+    content:"“";
+    font-size:40px;
+    position:absolute;
+    left:10px;
+    top:-10px;
+    color:#c79b3b;
+}
+
+.area-kembali{
+    text-align:center;
+    margin-top:50px;
+}
+
+.btn-kembali-bedah{
+    display:inline-block;
+    margin:30px 0;
+    padding:12px 24px;
+    background:#f4d06f;
+    color:#5a3e1b;
+    text-decoration:none;
+    font-family:Georgia, serif;
+    font-weight:bold;
+    border-radius:10px;
+    border:2px solid #c79b3b;
+    transition:0.3s;
+}
+
+/* hover */
+.btn-kembali-bedah:hover{
+    background:#c79b3b;
+    color:white;
+    transform:translateY(-2px);
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+h1{
+    text-align:center;
+}
+
+nav{
+    background:#f4d06f;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:3px solid #c79b3b;
+    box-shadow:0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* menu list */
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+    margin:0;
+    padding:0;
+}
+
+/* link menu */
+nav ul li a{
+    text-decoration:none;
+    color:#5a3e1b;
+    font-weight:bold;
+    font-family:Georgia, serif;
+    transition:0.3s;
+}
+
+/* hover effect */
+nav ul li a:hover{
+    background:#c79b3b;
+    color:white;
+    padding:6px 12px;
+    border-radius:6px;
+}
+
+nav a{
+    color:#5a3e1b;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:white;
+    background:#c79b3b;
+    padding:5px 12px;
+    border-radius:6px;
+}
+
+header{
+    background:#f4d06f;
+    padding:20px;
+    text-align:center;
+    border-bottom:3px solid #c79b3b;
+}
+
+.logo{
+    font-family:'Libre Baskerville', serif;
+    font-size:40px;
+    letter-spacing:2px;
+    color:#5a3e1b;
+    text-shadow:2px 2px #e8c35a;
+}
+
+    </style>
+     <header>
+   <h1 class="logo-text">Haru Reads Bookshope</h1>
+    </header>
+    <nav>  
+        <a href="index.html">Beranda</a>
+        <a href="produk.html">Produk</a>
+        <a href="bedah-buku.html">Bedah Buku</a>
+        <a href="testimoni.html">Testimoni</a>
+        <a href="tampil-testimoni.html">Testimoni Pembeli</a>
+
+</nav>
+<h1>Toko Buku Haru Reads</h1>
+<section class="daftar-produk">
+<main class="artikel">
+  <h2>Bedah Buku:  Negeri 5 Menara</h2>
+  <p class="penulis">Ditulis oleh: Ahmad Fuadi</p>
+
+  <img src="Image/Negeri 5 Menara.jpg"  alt="Sampul Negeri 5 Menara"  class="sampul">
+
+  <p>
+        Negeri 5 Menara karya Ahmad Fuadi adalah novel inspiratif yang mengisahkan perjalanan 
+    Alif dan lima sahabatnya dalam menuntut ilmu di sebuah pesantren bernama Pondok Madani. 
+    Dengan latar kehidupan santri yang penuh disiplin dan kebersamaan, 
+    novel ini menampilkan perjuangan, persahabatan, serta mimpi besar para tokohnya untuk menaklukkan dunia. 
+        Dibalut dengan pesan motivasi Man Jadda Wajada (siapa yang bersungguh-sungguh akan berhasil), 
+    buku ini mengajarkan tentang kerja keras, ketekunan, dan pentingnya pendidikan dalam meraih masa depan yang gemilang.
+  </p>
+
+  <blockquote>
+      "Man Jadda Wajada - siapa yang bersungguh-sungguh, dia akan berhasil."
+  </blockquote>
+
+  <p>
+       Kalimat itu menjadi semangat utama dalam buku ini.
+  Kisah yang ditulis berdasarkan pengalaman nyata ini sangat menginspirasi,
+       terutama bagi pelajar yang sedang mengejar mimpi mereka.
+  Penulis berhasil menyampaikan pesan-pesan moral melalui narasi yang hidup. 
+  </p>
+
+  <p>
+        Buku ini cocok dibaca oleh remaja dan orang dewasa yang sedang mencari
+    motivasi hidup. Cerita persahabatan, perjuangan, dan cinta belajar membuatnya menyentuh dan
+    relevan bagi pembaca di berbagai usia. 
+  </p>
+
+</main>
+</section>
+
+<section class="daftar-produk">
+<main class="artikel">
+    <h2>Bedah Buku: Chemistry book</h2>
+    <p class="penulis">Ditulis oleh: Brent Robert</p>
+
+    <img src="Image/Golden Book of Chemistry Experiments _ Brent, Robert _ Free Download, Borrow, and Streaming _ Internet Archive.jpg"  alt="Sampul Chemistry book" class="sampul">
+
+    <p>
+            Buku Chemistry ini dirancang untuk membantu siswa memahami konsep-konsep kimia secara mudah, sistematis, dan aplikatif. 
+        Materi disusun dari dasar hingga tingkat lanjut, dilengkapi dengan contoh soal, pembahasan langkah demi langkah, serta latihan yang memperkuat pemahaman. 
+        Dengan bahasa yang jelas dan ilustrasi pendukung, buku ini mendorong pembaca untuk berpikir kritis, memahami fenomena kimia dalam kehidupan sehari-hari, serta meningkatkan kemampuan analisis dalam memecahkan masalah. 
+        Cocok digunakan sebagai bahan belajar mandiri maupun pendamping pembelajaran di sekolah.
+    </p>
+    <blockquote>
+        “Langkah kecil dalam belajar kimia hari ini adalah kunci keberhasilan sains di masa depan.”
+    </blockquote>
+
+    <p>
+            Quote ini menggambarkan bahwa belajar kimia bukan hanya tentang rumus dan teori, tetapi tentang memahami proses ilmiah yang terjadi dalam kehidupan sehari-hari. 
+        Dengan semangat belajar yang konsisten dan cara berpikir kritis, kimia dapat menjadi ilmu yang menarik, mudah dipahami, serta bermanfaat untuk masa depan. 
+        Pesan ini diharapkan dapat memotivasi pelajar untuk terus belajar, bereksplorasi, dan mengembangkan potensi diri di bidang sains.
+    </p>
+
+    <p>
+            Buku Chemistry hadir sebagai sumber belajar yang dirancang untuk mempermudah pemahaman konsep kimia secara menyeluruh dan terstruktur. 
+        Setiap bab disusun dengan penjelasan yang ringkas namun mendalam, didukung ilustrasi, rangkuman materi, serta latihan soal yang membantu memperkuat pemahaman. 
+        Buku ini tidak hanya fokus pada teori, tetapi juga mengajak pembaca mengenal aplikasi kimia dalam kehidupan nyata. 
+        Dengan pendekatan yang efektif dan komunikatif, buku ini menjadi pilihan tepat bagi pelajar yang ingin meningkatkan prestasi dan kepercayaan diri dalam mata pelajaran kimia.
+    </p>
+
+</main>
+</section>
+
+<section class="daftar-produk">
+<main class="artikel">
+ <h2>Bedah Buku: SMath Book</h2>  
+ <p class="penulis">Ditulis oleh: Arthur Benjamin</p>
+
+ <img src="Image/The Magic of Math by Arthur Benjamin - BookBub.jpg"  alt="Sampul SMath Book" class="sampul">
+
+
+ <p>
+        Buku Math ini dirancang untuk membantu siswa memahami konsep matematika secara logis, sistematis, dan mudah dipahami. 
+    Materi disusun bertahap dari konsep dasar hingga tingkat lanjutan, dilengkapi dengan contoh soal, pembahasan langkah demi langkah, serta latihan soal yang menantang untuk melatih kemampuan berpikir kritis dan pemecahan masalah. 
+    Dengan penyajian yang jelas dan terstruktur, buku ini membantu pembaca membangun pemahaman yang kuat, meningkatkan kepercayaan diri, serta menjadikan matematika sebagai pelajaran yang menarik dan menyenangkan. 
+    Cocok digunakan sebagai buku pendamping belajar di sekolah maupun untuk belajar mandiri di rumah.
+ </p>
+
+ <blockquote>
+    “Setiap soal adalah tantangan, dan setiap jawaban adalah langkah menuju kecerdasan.”
+ </blockquote>
+
+ <p>
+        Menggambarkan bahwa matematika bukan sekadar angka dan rumus, melainkan proses berpikir logis yang melatih ketelitian, kesabaran, dan kemampuan memecahkan masalah. 
+    Pesan ini diharapkan dapat memotivasi siswa untuk lebih percaya diri dalam belajar matematika, berani menghadapi tantangan soal, serta menjadikan matematika sebagai sarana untuk mengembangkan pola pikir yang cerdas dan terstruktur.
+ </p>
+
+ <p>
+        Buku Math dirancang untuk membantu siswa membangun pemahaman matematika yang kuat dan berkelanjutan. 
+    Setiap materi disusun dengan pendekatan konseptual yang mudah diikuti, dilengkapi ilustrasi, rangkuman, dan latihan soal yang variatif. 
+    Buku ini tidak hanya mengajarkan cara menghitung, tetapi juga melatih cara berpikir logis, kritis, dan sistematis.
+    Dengan metode pembelajaran yang terarah, buku ini mendorong siswa untuk lebih aktif, mandiri, dan percaya diri dalam menghadapi berbagai tantangan matematika di sekolah.
+ </p>
+</main>
+</section>
+
+<section class="daftar-produk">
+<main class="artikel">
+ <h2>Bedah Buku: Physics Book</h2>  
+ <p class="penulis">Ditulis oleh: Jakob SchWichtenberg</p>
+
+ <img src="Image/Physics From Finance_ A Gentle Introduction To Gauge Theories, Fundamental Interactions And Fiber Bundles.jpg"  alt="Sampul Physics Book"  class="sampul">
+
+
+ <p>
+    Buku Fisika ini dirancang untuk membantu siswa memahami konsep-konsep fisika secara mudah, sistematis, dan menyenangkan. 
+    Materi disusun berdasarkan kurikulum terbaru dengan bahasa yang jelas serta dilengkapi contoh soal, pembahasan langkah demi langkah, dan latihan evaluasi di setiap bab. 
+    Buku ini membahas berbagai topik penting seperti gerak, gaya, energi, listrik, gelombang, dan optik yang dikemas secara aplikatif agar pembaca dapat mengaitkan teori dengan fenomena sehari-hari.
+    Cocok digunakan sebagai buku pegangan belajar mandiri, pendamping pembelajaran di sekolah, maupun referensi tambahan untuk persiapan ujian. 
+    Dengan tampilan yang rapi dan isi yang padat namun mudah dipahami, buku ini menjadi pilihan tepat untuk meningkatkan pemahaman dan prestasi belajar fisika.
+
+ </p>
+
+ <blockquote>
+    "Setiap rumus fisika adalah langkah kecil menuju pemahaman besar tentang dunia."
+ </blockquote>
+
+ <p>
+    Quote ini menggambarkan bahwa fisika bukan hanya tentang rumus dan perhitungan, tetapi tentang memahami rahasia alam semesta dan fenomena di sekitar kita. 
+    Melalui buku fisika ini, pembaca diajak untuk melihat ilmu pengetahuan sebagai sesuatu yang menarik, logis, dan penuh makna. 
+    Deskripsi ini menekankan bahwa belajar fisika dapat menumbuhkan rasa ingin tahu, melatih cara berpikir kritis, serta membuka wawasan tentang bagaimana dunia bekerja secara ilmiah.
+ </p>
+</main>
+</section>
+<div class="area-kembali">
+   <a href="produk.html" class="btn-kembali-bedah">← Kembali</a>
+</div>
+
+<footer>
+    <p>&copy;2026 Haru Reads BookShope</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<html lang="id">
+<head>  <meta charset="UTF-8"   />
+        <meta name="viewport" content="widht=device-widht,initial-scale=1.0"  />
+        <title>Produk Buku</title>
+        </head>
+
+<body>
+    <style>
+        /* ===== WARNA DASAR ===== */
+:root{
+    --vintage-yellow: #f4d06f;
+    --vintage-dark: #5a3e1b;
+    --vintage-brown: #c79b3b;
+    --vintage-light: #fff6d6;
+    --vintage-shadow: rgba(0,0,0,0.15);
+}
+
+/* ===== BODY ===== */
+body{
+    margin:0;
+    font-family: Georgia, serif;
+    background: var(--vintage-light);
+    color: var(--vintage-dark);
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+    background: var(--vintage-yellow);
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:3px solid var(--vintage-brown);
+}
+
+.navbar a{
+    text-decoration:none;
+    color: var(--vintage-dark);
+    font-weight:bold;
+    margin-left:20px;
+}
+
+.navbar a:hover{
+    color:white;
+}
+
+/* ===== BUTTON ===== */
+button{
+    background: var(--vintage-yellow);
+    border:none;
+    padding:10px 20px;
+    border-radius:6px;
+    color: var(--vintage-dark);
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow: 2px 2px 6px var(--vintage-shadow);
+}
+
+button:hover{
+    background: var(--vintage-brown);
+    color:white;
+}
+
+/* ===== CARD PRODUK ===== */
+.card{
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 4px 10px var(--vintage-shadow);
+    border:1px solid #ecd9a3;
+}
+
+.card h3{
+    margin-top:0;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background: var(--vintage-yellow);
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+    border-top:3px solid var(--vintage-brown);
+}
+
+/* ===== DAFTAR PRODUK (GRID) ===== */
+.daftar-produk{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    padding:30px;
+}
+
+/* ===== CARD PRODUK ===== */
+.produk{
+    background:#fffdf4;
+    border-radius:15px;
+    padding:15px;
+    text-align:center;
+    border:1px solid #ecd9a3;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.produk:hover{
+    transform:translateY(-5px);
+}
+
+/* ===== GAMBAR PRODUK ===== */
+.produk img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+/* ===== JUDUL PRODUK ===== */
+.produk h2{
+    font-size:20px;
+    color:#5a3e1b;
+    margin:10px 0 5px;
+    font-family:Georgia, serif;
+}
+
+/* ===== SUBJUDUL / KATEGORI ===== */
+.produk h3{
+    font-size:15px;
+    color:#8b6b2e;
+    margin:5px 0;
+    font-weight:normal;
+}
+
+/* ===== HARGA ===== */
+.harga{
+    font-size:18px;
+    font-weight:bold;
+    color:#c79b3b;
+    margin:10px 0;
+}
+
+/* ===== DESKRIPSI ===== */
+.deskripsi{
+    font-size:14px;
+    color:#5a3e1b;
+    line-height:1.5;
+}
+
+.btn-kembali{
+    display:inline-block;
+    margin:20px;
+    padding:10px 18px;
+    background:#f4d06f;
+    color:#5a3e1b;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:8px;
+    border:2px solid #c79b3b;
+    font-family:Georgia, serif;
+    transition:0.3s;
+}
+
+/* Hover */
+.btn-kembali:hover{
+    background:#c79b3b;
+    color:white;
+    transform:translateY(-2px);
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* container tombol */
+.kembali-container{
+    text-align:center;
+    margin:40px 0;
+}
+
+/* tombol */
+.btn-kembali{
+    display:inline-block;
+    padding:12px 25px;
+    background:#f4d06f;
+    color:#5a3e1b;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:10px;
+    border:2px solid #c79b3b;
+    font-family:Georgia, serif;
+    transition:0.3s;
+}
+
+/* hover */
+.btn-kembali:hover{
+    background:#c79b3b;
+    color:white;
+    transform:translateY(-3px);
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+.produk-title{
+    text-align:center;
+    width:fit-content;
+    margin:20px auto;
+}
+
+/* ===== HEADER ===== */
+header{
+    background:#f4d06f;
+    padding:20px 40px;
+    border-bottom:3px solid #c79b3b;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* container isi header */
+.header-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* logo / judul */
+.header-title{
+    font-family:Georgia, serif;
+    font-size:28px;
+    color:#5a3e1b;
+    margin:0;
+}
+
+/* menu navigasi */
+.header-menu a{
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:bold;
+    color:#5a3e1b;
+    transition:0.3s;
+}
+
+/* hover menu */
+.header-menu a:hover{
+    color:white;
+    background:#c79b3b;
+    padding:5px 12px;
+    border-radius:6px;
+}
+
+h1{
+    text-align:center;
+}
+
+nav{
+    background:#f4d06f;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:3px solid #c79b3b;
+    box-shadow:0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* menu list */
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+    margin:0;
+    padding:0;
+}
+
+/* link menu */
+nav ul li a{
+    text-decoration:none;
+    color:#5a3e1b;
+    font-weight:bold;
+    font-family:Georgia, serif;
+    transition:0.3s;
+}
+
+/* hover effect */
+nav ul li a:hover{
+    background:#c79b3b;
+    color:white;
+    padding:6px 12px;
+    border-radius:6px;
+}
+
+nav a{
+    color:#5a3e1b;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:white;
+    background:#c79b3b;
+    padding:5px 12px;
+    border-radius:6px;
+}
+
+header{
+    background:#f4d06f;
+    padding:20px;
+    text-align:center;
+    border-bottom:3px solid #c79b3b;
+}
+
+.logo{
+    font-family:'Libre Baskerville', serif;
+    font-size:40px;
+    letter-spacing:2px;
+    color:#5a3e1b;
+    text-shadow:2px 2px #e8c35a;
+}
+
+    </style>
+     <header>
+   <h1 class="logo-text">Haru Reads Bookshope</h1>
+    </header>
+    <nav>  
+        <a href="index.html">Beranda</a>
+        <a href="produk.html">Produk</a>
+        <a href="bedah-buku.html">Bedah Buku</a>
+        <a href="testimoni.html">Testimoni</a>
+        <a href="tampil-testimoni.html">Testimoni Pembeli</a>
+
+</nav>
+
+<h1>Daftar Produk</h1>
+<selection class="daftar-produk">  <!-- Produk-produk akan ditambahkan di sini -->
+    
+
+<div class="produk">
+    <img src="Image/Golden Book of Chemistry Experiments _ Brent, Robert _ Free Download, Borrow, and Streaming _ Internet Archive.jpg" alt="Buku 1" width="150" />
+    <h2>Chemistry Book</h2>
+    <p class="harga">Rp80.000</p>
+    <p class="deskripsi">Buku Kimia berkualitas dengan materi terstruktur, mudah dipahami, dan cocok untuk belajar mandiri maupun di kelas.</p>
+</div>
+
+<div class="produk">
+    <img src="Image/The Magic of Math by Arthur Benjamin - BookBub.jpg"  alt="Buku 2"   width="150"   />
+    <h2>SMath Book</h2>
+    <p class="harga">Rp.84.000</p>
+    <p class="deskripsi">Buku Matematika praktis, mudah dipahami, dan efektif untuk belajar mandiri maupun di kelas.</p>
+</div>
+
+<div class="produk">
+    <img src="Image/Negeri 5 Menara    🇮🇩.jpg" alt="Buku 3"   width="150"    />
+    <h2>Negeri 5 Menara</h2>
+    <p class="harga">Rp.149.000</p>
+    <p class="deskripsi">Negeri 5 Menara adalah novel inspiratif tentang perjuangan santri meraih mimpi melalui semangat, disiplin, dan prinsip Man Jadda Wajada.</p>
+
+<div class="produk">
+    <img src="Image/Physics From Finance_ A Gentle Introduction To Gauge Theories, Fundamental Interactions And Fiber Bundles.jpg"  alt="Buku 4"   width="150">
+    <h2>Physics Book</h2>
+    <p class="harga">Rp.178.000</p>
+    <p class="deskripsi">Buku ini membantu memahami konsep fisika secara jelas, ringkas, dan mudah dipahami dengan contoh aplikatif.</p>
+</div>
+   <a href="#" class="btn-kembali">← Kembali</a>
+
+</div>
+</selection>
+<footer>
+    <p>&copy;2026 Haru Reads BookShope</p>
+</footer>
+</body>
+
+
+
+
+        </html>
